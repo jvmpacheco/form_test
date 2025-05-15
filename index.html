@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Denúncias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Faça sua denúncia</h1>
+        <form id="denunciaForm">
+            <!-- Área de texto para a denúncia -->
+            <div class="form-group">
+                <textarea 
+                    id="denunciaTexto" 
+                    name="denuncia" 
+                    rows="6" 
+                    placeholder="Digite sua denúncia aqui..."
+                    required
+                ></textarea>
+            </div>
+            
+            <!-- Botão de submissão -->
+            <button type="submit" id="submitBtn">Submeter</button>
+        </form>
+    </div>
+
+    <!-- Scripts necessários para o Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>

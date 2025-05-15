@@ -1,0 +1,20 @@
+Configuração do Supabase
+   Para configurar o Supabase, siga estes passos:
+
+   a) Crie uma conta no Supabase (https://supabase.com)
+   b) Crie um novo projeto
+   c) No seu projeto Supabase, crie uma nova tabela chamada 'denuncias' com as colunas:
+      - id: int8 - Deixe marcado Primary
+      - texto: text - EMPTY
+      - data_criacao: timestamptz - now()
+   d) Na seção de configurações do projeto, localize:
+      - URL do projeto
+      - chave anon/public (não use a chave service_role)
+   e) No arquivo script.js, substitua:
+      - SUA_URL_DO_SUPABASE pela URL do projeto
+      - SUA_CHAVE_ANON_DO_SUPABASE pela chave anon/public
+
+Como Executar o Projeto
+   a) Certifique-se de ter todos os arquivos na mesma pasta
+   b) Configure o Supabase conforme instruções acima
+   c) Abra o arquivo index.html no navegador web
