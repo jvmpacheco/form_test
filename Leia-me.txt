@@ -11,10 +11,26 @@ Configuração do Supabase
       - URL do projeto
       - chave anon/public (não use a chave service_role)
    e) No arquivo script.js, substitua:
-      - SUA_URL_DO_SUPABASE pela URL do projeto
-      - SUA_CHAVE_ANON_DO_SUPABASE pela chave anon/public
+      - const supabaseUrl = pela url do seu projeto (aqui vc vai encontrar a url do meu projeto)
+      - const supabaseKey = pela chave anon/public do seu projeto
+   f) IMPORTANTE: Desative o RLS (Row Level Security) para a tabela 'denuncias':
+      - No painel do Supabase, vá para a tabela 'denuncias'
+      - Clique na aba "Authentication"
+      - Localize a opção "Row Level Security (RLS)" e desative-a
+      - Ou, se preferir manter o RLS ativado, crie uma política que permita inserções
+        de usuários anônimos usando a política: ( true ) para INSERT
 
 Como Executar o Projeto
    a) Certifique-se de ter todos os arquivos na mesma pasta
    b) Configure o Supabase conforme instruções acima
-   c) Abra o arquivo index.html no navegador web
+   c) Abra o arquivo index.html em um navegador web
+
+Função de Teste de Conexão
+   O código inclui uma função para testar a conexão com o Supabase, mas está comentada.
+   Para utilizá-la:
+   a) Descomente o botão de teste no arquivo index.html (procure por "Botão de teste de conexão")
+   b) Descomente a área de resultados do teste no arquivo index.html
+   c) Descomente as funções de teste no arquivo script.js
+   
+   Esta função é útil para verificar se a conexão com o Supabase está funcionando
+   corretamente antes de usar o formulário principal.
